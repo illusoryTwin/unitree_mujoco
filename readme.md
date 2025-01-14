@@ -1,6 +1,8 @@
 # Introduction
 Differences with origin unitree mujoco repo:
 * Add foot force sensor
+  * c++ simulation
+  * python simulation
 * Modified keyframe qpos
   * In simulation, use "Load key" button to reload the robot. 
 * Add new robot model:
@@ -70,7 +72,6 @@ sudo apt install libglfw3-dev libxinerama-dev libxcursor-dev libxi-dev
 ```bash
 git clone https://github.com/google-deepmind/mujoco.git
 cd mujoco
-git checkout 3.2.1
 mkdir build && cd build
 cmake ..
 make -j

@@ -94,6 +94,7 @@ void UnitreeSdk2Bridge::PublishLowStateGo()
             low_state_go_.imu_state().accelerometer()[2] = mj_data_->sensordata[dim_motor_sensor_ + 9];
         }
 
+        // foot contact sensor
         if (have_touch_sensor_) {
             low_state_go_.foot_force()[0] = mj_data_->sensordata[dim_motor_sensor_ + 16];
             low_state_go_.foot_force()[1] = mj_data_->sensordata[dim_motor_sensor_ + 17];
