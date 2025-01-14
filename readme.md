@@ -27,6 +27,7 @@ Differences with origin unitree mujoco repo:
 - `example`: Example programs
 
 ## Supported Unitree sdk2 Messages:
+**Current version only supports low-level development, mainly used for sim to real verification of controller**
 - `LowCmd`: Motor control commands
 - `LowState`: Motor state information
 - `SportModeState`: Robot position and velocity data
@@ -51,6 +52,7 @@ Note:
 ## C++ Simulator (simulate)
 ### 1. Dependencies
 #### unitree_sdk2
+It is recommended to install `unitree_sdk2` in `/opt/unitree_robotics` path.
 ```bash
 git clone https://github.com/unitreerobotics/unitree_sdk2.git
 cd unitree_sdk2/
@@ -60,7 +62,8 @@ cmake ..
 sudo make install
 ```
 For more details, see: https://github.com/unitreerobotics/unitree_sdk2
-#### mujoco >= 3.0.0
+#### mujoco
+Current version is tested in mujoco-3.2.7
 ```bash
 sudo apt install libglfw3-dev libxinerama-dev libxcursor-dev libxi-dev
 ```
